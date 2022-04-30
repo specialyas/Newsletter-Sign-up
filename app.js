@@ -37,13 +37,13 @@ app.post('/', (req, res) => {
 
     const options = {
         method: "POST",
-        auth: "yusuf1:ab54f746523c7521dba685b8960765cc-us"
+        auth: "yusuf1:ab54f746523c7521dba685b8960765cc-us9"
     }
 
     const request = https.request(url, options, (response) => {
         
         if (response.statusCode === 200){
-            res.send('failed')
+            res.sendFile(__dirname + '/success.html')
         }else{
             res.sendFile(__dirname + '/failure.html')
         }
@@ -52,7 +52,7 @@ app.post('/', (req, res) => {
             console.log(JSON.parse(data));
         }) 
     })
-    // request.write(jsonData)
+    request.write(jsonData)
     request.end()
 })
 
