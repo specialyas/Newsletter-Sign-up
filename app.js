@@ -14,7 +14,6 @@ app.get('/', (req, res) => {
 })
 
 app.post('/', (req, res) => {
-<<<<<<< HEAD
     const firstName = req.body.fname
     const lastName = req.body.lname
     const email = req.body.email
@@ -34,7 +33,7 @@ app.post('/', (req, res) => {
 
     const jsonData = JSON.stringify(data);
 
-    const url = "https://us9.api.mailchimp/3.0/lists/b429ec06a4"
+    const url = "https://us9.api.mailchimp.com/3.0/lists/b429ec06a4"
 
     const options = {
         method: "POST",
@@ -48,9 +47,6 @@ app.post('/', (req, res) => {
     })
     request.write(jsonData)
     request.end()
-
-=======
->>>>>>> 00590793ab2d314a1eeda1032c09b21931d28599
 })
 
 
