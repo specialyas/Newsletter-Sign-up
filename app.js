@@ -37,10 +37,17 @@ app.post('/', (req, res) => {
 
     const options = {
         method: "POST",
-        auth: "yusuf1:ab54f746523c7521dba685b8960765cc-us9"
+        auth: "yusuf1:ab54f746523c7521dba685b8960765cc-us"
     }
 
     const request = https.request(url, options, (response) => {
+        
+        if (response.statusCode === 200){
+            res.send('failed')
+        }else{
+            res.sendFile(__dirname + '/failure.html')
+        }
+        
         response.on("data", (data) => {
             console.log(JSON.parse(data));
         }) 
