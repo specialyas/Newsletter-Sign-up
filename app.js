@@ -15,6 +15,9 @@ app.post('/', (req, res) => {
     let firstName = req.body.fname
     let lastName = req.body.lname
     let email = req.body.email
+    console.log(firstName);
+    console.log(lastName);
+    console.log(email);
 })
 
 
