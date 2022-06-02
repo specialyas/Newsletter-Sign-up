@@ -12,7 +12,9 @@ app.get('/', (req, res) => {
 })
 
 app.post('/', (req, res) => {
-    console.log('Post sucessfull')
+    let firstName = req.body.fname
+    let lastName = req.body.lname
+    let email = req.body.email
 })
 
 
