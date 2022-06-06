@@ -10,6 +10,10 @@ app.get('/', (req, res) => {
     res.sendFile(__dirname + '/signup.html')
 })
 
+app.post('/', (req, res) => {
+    console.log('Post sucessfull')
+})
+
 
 PORT = 3000
 app.listen(PORT, () => {
