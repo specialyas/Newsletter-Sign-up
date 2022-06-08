@@ -5,11 +5,8 @@ const app = express()
 
 app.use(express.static('public'))
 
-app.get('/', (req, res) => {
-    res.send("Hello")
-})
 
-app.get('/signup', (req, res) => {
+app.get('/', (req, res) => {
     res.sendFile(__dirname + '/signup.html')
 })
 
