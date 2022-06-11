@@ -6,6 +6,10 @@ app.get('/', (req, res) => {
     res.send("Hello")
 })
 
+app.get('/signup', (req, res) => {
+    res.sendFile(__dirname + '/signup.html')
+})
+
 
 PORT = 3000
 app.listen(PORT, () => {
