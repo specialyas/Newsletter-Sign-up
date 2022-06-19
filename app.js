@@ -14,6 +14,7 @@ app.get('/', (req, res) => {
 })
 
 app.post('/', (req, res) => {
+<<<<<<< HEAD
     const firstName = req.body.fname
     const lastName = req.body.lname
     const email = req.body.email
@@ -48,6 +49,8 @@ app.post('/', (req, res) => {
     request.write(jsonData)
     request.end()
 
+=======
+>>>>>>> 00590793ab2d314a1eeda1032c09b21931d28599
 })
 
 
