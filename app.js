@@ -35,7 +35,7 @@ app.post('/', (req, res) => {
     const jsonData = JSON.stringify(data);
 
   
-
+const newbie = 'This is totally useless'
 
     const url = "https://us9.api.mailchimp.com/3.0/lists/" + process.env.lIST_ID
 
